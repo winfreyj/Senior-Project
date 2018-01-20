@@ -17,34 +17,34 @@ namespace GUI_TEst
             InitializeComponent();
         }
 
-        private void yawSliderMoved(object sender, EventArgs e)
+        private void YawSliderMoved(object sender, EventArgs e)
         {
-            yawValue.Text = (yawSlider.Value/10.00).ToString();
+            yawValue.Text = (yawSlider.Value/100.00).ToString();
         }
 
-        private void pitchSliderMoved(object sender, EventArgs e)
+        private void PitchSliderMoved(object sender, EventArgs e)
         {
-            pitchValue.Text = (pitchSlider.Value/10.00).ToString();
+            pitchValue.Text = (pitchSlider.Value/100.00).ToString();
         }
 
-        private void rollSliderMoved(object sender, EventArgs e)
+        private void RollSliderMoved(object sender, EventArgs e)
         {
-            rollValue.Text = (rollSlider.Value/10.00).ToString();
+            rollValue.Text = (rollSlider.Value/100.00).ToString();
         }
 
-        private void yawValueChanged(object sender, KeyPressEventArgs e)
+        private void YawValueChanged(object sender, EventArgs e)
         {
-            
+            yawSlider.Value = (int)(yawValue.Value * 100);
         }
 
-        private void pitchValueChanged(object sender, KeyPressEventArgs e)
+        private void PitchValueChanged(object sender, EventArgs e)
         {
-
+            pitchSlider.Value = (int)(pitchValue.Value * 100);
         }
 
-        private void rollValueChanged(object sender, KeyPressEventArgs e)
+        private void RollValueChanged(object sender, EventArgs e)
         {
-
+            rollSlider.Value = (int)(rollValue.Value * 100);
         }
     }
 }
