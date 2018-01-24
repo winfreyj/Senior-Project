@@ -5,9 +5,20 @@ namespace GUI_TEst
 {
     public partial class Form1 : Form
     {
+        TabPage[] tabs;
         public Form1()
         {
             InitializeComponent();
+            tabs = new TabPage[] { motor1, motor2, motor3, motor4, motor5 };
+            motorTabs.TabPages.Remove(motor10);
+            motorTabs.TabPages.Remove(motor9);
+            motorTabs.TabPages.Remove(motor8);
+            motorTabs.TabPages.Remove(motor7);
+            motorTabs.TabPages.Remove(motor6);
+            motorTabs.TabPages.Remove(motor5);
+            motorTabs.TabPages.Remove(motor4);
+            motorTabs.TabPages.Remove(motor3);
+            motorTabs.TabPages.Remove(motor2);
         }
 
         private void YawSliderMoved(object sender, EventArgs e)
@@ -42,19 +53,18 @@ namespace GUI_TEst
 
         private void ChangeMotorTabs(object sender, EventArgs e)
         {
-            TabPage[] tabs = new TabPage[] { motor1, motor2, motor3, motor4, motor5 };
             int current, total;
             current = motorTabs.TabPages.Count;
             total = (int)cameraCounter.Value;
             if(total > current)
             {
                 for (int i = current; i < total; i++)
-                    tabs[i].Show();
+                    motorTabs.TabPages.Add(tabs[i]);
             }
             else
             {
                 for (int i = current; i > total; i--)
-                    tabs[i - 1].Hide();
+                    motorTabs.TabPages.Remove(tabs[i - 1]);
             }
         }
     }
