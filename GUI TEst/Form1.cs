@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GUI_TEst
@@ -45,6 +38,24 @@ namespace GUI_TEst
         private void RollValueChanged(object sender, EventArgs e)
         {
             rollSlider.Value = (int)(rollValue.Value * 100);
+        }
+
+        private void ChangeMotorTabs(object sender, EventArgs e)
+        {
+            TabPage[] tabs = new TabPage[] { motor1, motor2, motor3, motor4, motor5 };
+            int current, total;
+            current = motorTabs.TabPages.Count;
+            total = (int)cameraCounter.Value;
+            if(total > current)
+            {
+                for (int i = current; i < total; i++)
+                    tabs[i].Show();
+            }
+            else
+            {
+                for (int i = current; i > total; i--)
+                    tabs[i - 1].Hide();
+            }
         }
     }
 }
