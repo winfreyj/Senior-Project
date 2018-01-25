@@ -41,6 +41,8 @@
             this.rollValue = new System.Windows.Forms.NumericUpDown();
             this.motorTabs = new System.Windows.Forms.TabControl();
             this.motor1 = new System.Windows.Forms.TabPage();
+            this.automaticButton = new System.Windows.Forms.Button();
+            this.manualButton = new System.Windows.Forms.Button();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
@@ -50,6 +52,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
             ((System.ComponentModel.ISupportInitialize)(this.yawSlider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pitchSlider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rollSlider)).BeginInit();
@@ -70,7 +73,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(125, 107);
+            this.label1.Location = new System.Drawing.Point(307, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(28, 13);
             this.label1.TabIndex = 0;
@@ -79,7 +82,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(125, 158);
+            this.label2.Location = new System.Drawing.Point(307, 96);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(31, 13);
             this.label2.TabIndex = 1;
@@ -88,7 +91,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(125, 209);
+            this.label3.Location = new System.Drawing.Point(307, 147);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(25, 13);
             this.label3.TabIndex = 2;
@@ -96,7 +99,7 @@
             // 
             // yawSlider
             // 
-            this.yawSlider.Location = new System.Drawing.Point(162, 104);
+            this.yawSlider.Location = new System.Drawing.Point(344, 42);
             this.yawSlider.Maximum = 1000;
             this.yawSlider.Minimum = -1000;
             this.yawSlider.Name = "yawSlider";
@@ -107,7 +110,7 @@
             // 
             // pitchSlider
             // 
-            this.pitchSlider.Location = new System.Drawing.Point(162, 151);
+            this.pitchSlider.Location = new System.Drawing.Point(344, 89);
             this.pitchSlider.Maximum = 1000;
             this.pitchSlider.Minimum = -1000;
             this.pitchSlider.Name = "pitchSlider";
@@ -118,7 +121,7 @@
             // 
             // rollSlider
             // 
-            this.rollSlider.Location = new System.Drawing.Point(162, 199);
+            this.rollSlider.Location = new System.Drawing.Point(344, 137);
             this.rollSlider.Maximum = 1000;
             this.rollSlider.Minimum = -1000;
             this.rollSlider.Name = "rollSlider";
@@ -129,7 +132,7 @@
             // 
             // cameraCounter
             // 
-            this.cameraCounter.Location = new System.Drawing.Point(371, 72);
+            this.cameraCounter.Location = new System.Drawing.Point(553, 10);
             this.cameraCounter.Maximum = new decimal(new int[] {
             10,
             0,
@@ -154,7 +157,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(255, 74);
+            this.label4.Location = new System.Drawing.Point(437, 12);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(110, 13);
             this.label4.TabIndex = 10;
@@ -168,7 +171,7 @@
             0,
             0,
             131072});
-            this.yawValue.Location = new System.Drawing.Point(371, 107);
+            this.yawValue.Location = new System.Drawing.Point(553, 45);
             this.yawValue.Maximum = new decimal(new int[] {
             10,
             0,
@@ -187,7 +190,7 @@
             // pitchValue
             // 
             this.pitchValue.DecimalPlaces = 2;
-            this.pitchValue.Location = new System.Drawing.Point(371, 156);
+            this.pitchValue.Location = new System.Drawing.Point(553, 94);
             this.pitchValue.Maximum = new decimal(new int[] {
             10,
             0,
@@ -211,7 +214,7 @@
             0,
             0,
             131072});
-            this.rollValue.Location = new System.Drawing.Point(371, 207);
+            this.rollValue.Location = new System.Drawing.Point(553, 145);
             this.rollValue.Maximum = new decimal(new int[] {
             10,
             0,
@@ -230,7 +233,7 @@
             // motorTabs
             // 
             this.motorTabs.Controls.Add(this.motor1);
-            this.motorTabs.Location = new System.Drawing.Point(12, 275);
+            this.motorTabs.Location = new System.Drawing.Point(11, 186);
             this.motorTabs.Name = "motorTabs";
             this.motorTabs.SelectedIndex = 0;
             this.motorTabs.Size = new System.Drawing.Size(605, 298);
@@ -238,6 +241,8 @@
             // 
             // motor1
             // 
+            this.motor1.Controls.Add(this.automaticButton);
+            this.motor1.Controls.Add(this.manualButton);
             this.motor1.Controls.Add(this.numericUpDown1);
             this.motor1.Controls.Add(this.numericUpDown2);
             this.motor1.Controls.Add(this.numericUpDown3);
@@ -254,6 +259,26 @@
             this.motor1.TabIndex = 3;
             this.motor1.Text = "Motor 1";
             this.motor1.UseVisualStyleBackColor = true;
+            // 
+            // automaticButton
+            // 
+            this.automaticButton.Location = new System.Drawing.Point(77, 166);
+            this.automaticButton.Name = "automaticButton";
+            this.automaticButton.Size = new System.Drawing.Size(75, 23);
+            this.automaticButton.TabIndex = 24;
+            this.automaticButton.Text = "Automatic";
+            this.automaticButton.UseVisualStyleBackColor = true;
+            this.automaticButton.Click += new System.EventHandler(this.automaticOption);
+            // 
+            // manualButton
+            // 
+            this.manualButton.Location = new System.Drawing.Point(77, 119);
+            this.manualButton.Name = "manualButton";
+            this.manualButton.Size = new System.Drawing.Size(75, 23);
+            this.manualButton.TabIndex = 23;
+            this.manualButton.Text = "Manual";
+            this.manualButton.UseVisualStyleBackColor = true;
+            this.manualButton.Click += new System.EventHandler(this.manualOptions);
             // 
             // numericUpDown1
             // 
@@ -376,11 +401,21 @@
             this.label7.TabIndex = 14;
             this.label7.Text = "Yaw";
             // 
+            // elementHost1
+            // 
+            this.elementHost1.Location = new System.Drawing.Point(34, 12);
+            this.elementHost1.Name = "elementHost1";
+            this.elementHost1.Size = new System.Drawing.Size(267, 168);
+            this.elementHost1.TabIndex = 15;
+            this.elementHost1.Text = "elementHost1";
+            this.elementHost1.Child = null;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(629, 585);
+            this.ClientSize = new System.Drawing.Size(629, 496);
+            this.Controls.Add(this.elementHost1);
             this.Controls.Add(this.motorTabs);
             this.Controls.Add(this.rollValue);
             this.Controls.Add(this.pitchValue);
@@ -440,6 +475,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button automaticButton;
+        private System.Windows.Forms.Button manualButton;
+        private System.Windows.Forms.Integration.ElementHost elementHost1;
     }
 }
 

@@ -9,7 +9,7 @@ namespace GUI_TEst
         public Form1()
         {
             InitializeComponent();
-            tabs = new TabPage[] { motor1, motor2, motor3, motor4, motor5 };
+            tabs = new TabPage[] { motor1 }; /*, motor2, motor3, motor4, motor5 };
             motorTabs.TabPages.Remove(motor10);
             motorTabs.TabPages.Remove(motor9);
             motorTabs.TabPages.Remove(motor8);
@@ -18,7 +18,7 @@ namespace GUI_TEst
             motorTabs.TabPages.Remove(motor5);
             motorTabs.TabPages.Remove(motor4);
             motorTabs.TabPages.Remove(motor3);
-            motorTabs.TabPages.Remove(motor2);
+            motorTabs.TabPages.Remove(motor2);*/
         }
 
         private void YawSliderMoved(object sender, EventArgs e)
@@ -66,6 +66,16 @@ namespace GUI_TEst
                 for (int i = current; i > total; i--)
                     motorTabs.TabPages.Remove(tabs[i - 1]);
             }
+        }
+
+        private void manualOptions(object sender, EventArgs e)
+        {
+
+        }
+
+        private void automaticOption(object sender, EventArgs e)
+        {
+            
         }
     }
 }
