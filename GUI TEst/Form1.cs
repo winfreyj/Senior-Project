@@ -23,17 +23,17 @@ namespace GUI_TEst
 
         private void YawSliderMoved(object sender, EventArgs e)
         {
-            yawValue.Text = (yawSlider.Value/100.00).ToString();
+            yawValue.Value = (decimal)(yawSlider.Value / 100.00);
         }
 
         private void PitchSliderMoved(object sender, EventArgs e)
         {
-            pitchValue.Text = (pitchSlider.Value/100.00).ToString();
+            pitchValue.Value = (decimal)(pitchSlider.Value / 100.00);
         }
 
         private void RollSliderMoved(object sender, EventArgs e)
         {
-            rollValue.Text = (rollSlider.Value/100.00).ToString();
+            rollValue.Value = (decimal)(rollSlider.Value / 100.00);
         }
 
         private void YawValueChanged(object sender, EventArgs e)
@@ -56,7 +56,7 @@ namespace GUI_TEst
             int current, total;
             current = motorTabs.TabPages.Count;
             total = (int)cameraCounter.Value;
-            if(total > current)
+            if (total > current)
             {
                 for (int i = current; i < total; i++)
                     motorTabs.TabPages.Add(tabs[i]);
@@ -68,14 +68,55 @@ namespace GUI_TEst
             }
         }
 
-        private void manualOptions(object sender, EventArgs e)
+        private void ManualOptions(object sender, EventArgs e)
         {
+            trackBar1.Enabled = true;
+            trackBar2.Enabled = true;
+            trackBar3.Enabled = true;
 
+            numericUpDown1.Enabled = true;
+            numericUpDown2.Enabled = true;
+            numericUpDown3.Enabled = true;
         }
 
-        private void automaticOption(object sender, EventArgs e)
+        private void AutomaticOption(object sender, EventArgs e)
         {
-            
+            trackBar1.Enabled = false;
+            trackBar2.Enabled = false;
+            trackBar3.Enabled = false;
+
+            numericUpDown1.Enabled = false;
+            numericUpDown2.Enabled = false;
+            numericUpDown3.Enabled = false;
+
+            for (int i = trackBar1.Value; i <= 800; i += 1)
+            {
+                trackBar1.Value = i;
+                numericUpDown1.Value = (decimal)(trackBar1.Value / 100.00);
+                numericUpDown1.Update();
+                for (int j = 0; j < 1000000; j++) ;
+            }
+
+            for (int i = trackBar2.Value; i >= -500; i -= 1)
+            {
+                trackBar2.Value = i;
+                numericUpDown2.Value = (decimal)(trackBar2.Value / 100.00);
+                numericUpDown2.Update();
+                for (int j = 0; j < 1000000; j++) ;
+            }
+
+            for (int i = trackBar3.Value; i <= 150; i += 1)
+            {
+                trackBar3.Value = i;
+                numericUpDown3.Value = (decimal)(trackBar3.Value / 100.00);
+                numericUpDown3.Update();
+                for (int j = 0; j < 1000000; j++) ;
+            }
+        }
+
+        private void FillElementHost()
+        {
+            elementHost1.
         }
     }
 }

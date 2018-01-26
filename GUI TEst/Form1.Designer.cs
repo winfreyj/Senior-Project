@@ -268,7 +268,7 @@
             this.automaticButton.TabIndex = 24;
             this.automaticButton.Text = "Automatic";
             this.automaticButton.UseVisualStyleBackColor = true;
-            this.automaticButton.Click += new System.EventHandler(this.automaticOption);
+            this.automaticButton.Click += new System.EventHandler(this.AutomaticOption);
             // 
             // manualButton
             // 
@@ -278,7 +278,7 @@
             this.manualButton.TabIndex = 23;
             this.manualButton.Text = "Manual";
             this.manualButton.UseVisualStyleBackColor = true;
-            this.manualButton.Click += new System.EventHandler(this.manualOptions);
+            this.manualButton.Click += new System.EventHandler(this.ManualOptions);
             // 
             // numericUpDown1
             // 
@@ -346,6 +346,7 @@
             // 
             // trackBar1
             // 
+            this.trackBar1.BackColor = System.Drawing.SystemColors.HighlightText;
             this.trackBar1.Location = new System.Drawing.Point(329, 193);
             this.trackBar1.Maximum = 1000;
             this.trackBar1.Minimum = -1000;
@@ -356,6 +357,7 @@
             // 
             // trackBar2
             // 
+            this.trackBar2.BackColor = System.Drawing.SystemColors.HighlightText;
             this.trackBar2.Location = new System.Drawing.Point(329, 145);
             this.trackBar2.Maximum = 1000;
             this.trackBar2.Minimum = -1000;
@@ -366,6 +368,7 @@
             // 
             // trackBar3
             // 
+            this.trackBar3.BackColor = System.Drawing.SystemColors.HighlightText;
             this.trackBar3.Location = new System.Drawing.Point(329, 98);
             this.trackBar3.Maximum = 1000;
             this.trackBar3.Minimum = -1000;
