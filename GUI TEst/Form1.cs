@@ -19,6 +19,7 @@ namespace GUI_TEst
             motorTabs.TabPages.Remove(motor4);
             motorTabs.TabPages.Remove(motor3);
             motorTabs.TabPages.Remove(motor2);*/
+
         }
 
         private void YawSliderMoved(object sender, EventArgs e)
@@ -116,7 +117,7 @@ namespace GUI_TEst
 
         private void FillElementHost()
         {
-            elementHost1.
+            
         }
     }
 }

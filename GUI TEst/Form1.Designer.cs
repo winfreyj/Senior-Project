@@ -406,9 +406,9 @@
             // 
             // elementHost1
             // 
-            this.elementHost1.Location = new System.Drawing.Point(34, 12);
+            this.elementHost1.Location = new System.Drawing.Point(15, 13);
             this.elementHost1.Name = "elementHost1";
-            this.elementHost1.Size = new System.Drawing.Size(267, 168);
+            this.elementHost1.Size = new System.Drawing.Size(286, 167);
             this.elementHost1.TabIndex = 15;
             this.elementHost1.Text = "elementHost1";
             this.elementHost1.Child = null;
