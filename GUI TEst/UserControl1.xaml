@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid x:Name="VideoControl">
-        <MediaElement HorizontalAlignment="Left" Height="300" VerticalAlignment="Top" Width="300"/>
+        <MediaElement x:Name="MediaElement1" HorizontalAlignment="Left" Height="300" VerticalAlignment="Top" Width="300"/>
 
     </Grid>
 </UserControl>

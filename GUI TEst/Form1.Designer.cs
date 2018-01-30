@@ -53,6 +53,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
+            this.userControl11 = new GUI_TEst.UserControl1();
             ((System.ComponentModel.ISupportInitialize)(this.yawSlider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pitchSlider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rollSlider)).BeginInit();
@@ -411,7 +412,7 @@
             this.elementHost1.Size = new System.Drawing.Size(286, 167);
             this.elementHost1.TabIndex = 15;
             this.elementHost1.Text = "elementHost1";
-            this.elementHost1.Child = null;
+            this.elementHost1.Child = this.userControl11;
             // 
             // Form1
             // 
@@ -481,6 +482,7 @@
         private System.Windows.Forms.Button automaticButton;
         private System.Windows.Forms.Button manualButton;
         private System.Windows.Forms.Integration.ElementHost elementHost1;
+        private UserControl1 userControl11;
     }
 }
 
