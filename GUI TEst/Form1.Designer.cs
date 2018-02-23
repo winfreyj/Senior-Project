@@ -412,7 +412,7 @@
             this.elementHost1.Size = new System.Drawing.Size(286, 167);
             this.elementHost1.TabIndex = 15;
             this.elementHost1.Text = "elementHost1";
-            this.elementHost1.Child = this.userControl11;
+            //this.elementHost1.Child = this.userControl11;
             // 
             // Form1
             // 
