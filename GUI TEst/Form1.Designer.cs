@@ -52,8 +52,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
-            this.userControl11 = new GUI_TEst.UserControl1();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.yawSlider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pitchSlider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rollSlider)).BeginInit();
@@ -69,6 +68,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -234,10 +234,10 @@
             // motorTabs
             // 
             this.motorTabs.Controls.Add(this.motor1);
-            this.motorTabs.Location = new System.Drawing.Point(11, 186);
+            this.motorTabs.Location = new System.Drawing.Point(11, 282);
             this.motorTabs.Name = "motorTabs";
             this.motorTabs.SelectedIndex = 0;
-            this.motorTabs.Size = new System.Drawing.Size(605, 298);
+            this.motorTabs.Size = new System.Drawing.Size(605, 202);
             this.motorTabs.TabIndex = 14;
             // 
             // motor1
@@ -256,14 +256,14 @@
             this.motor1.Location = new System.Drawing.Point(4, 22);
             this.motor1.Name = "motor1";
             this.motor1.Padding = new System.Windows.Forms.Padding(3);
-            this.motor1.Size = new System.Drawing.Size(597, 272);
+            this.motor1.Size = new System.Drawing.Size(597, 176);
             this.motor1.TabIndex = 3;
             this.motor1.Text = "Motor 1";
             this.motor1.UseVisualStyleBackColor = true;
             // 
             // automaticButton
             // 
-            this.automaticButton.Location = new System.Drawing.Point(77, 166);
+            this.automaticButton.Location = new System.Drawing.Point(53, 96);
             this.automaticButton.Name = "automaticButton";
             this.automaticButton.Size = new System.Drawing.Size(75, 23);
             this.automaticButton.TabIndex = 24;
@@ -273,7 +273,7 @@
             // 
             // manualButton
             // 
-            this.manualButton.Location = new System.Drawing.Point(77, 119);
+            this.manualButton.Location = new System.Drawing.Point(53, 49);
             this.manualButton.Name = "manualButton";
             this.manualButton.Size = new System.Drawing.Size(75, 23);
             this.manualButton.TabIndex = 23;
@@ -289,7 +289,7 @@
             0,
             0,
             131072});
-            this.numericUpDown1.Location = new System.Drawing.Point(538, 201);
+            this.numericUpDown1.Location = new System.Drawing.Point(514, 131);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             10,
             0,
@@ -307,7 +307,7 @@
             // numericUpDown2
             // 
             this.numericUpDown2.DecimalPlaces = 2;
-            this.numericUpDown2.Location = new System.Drawing.Point(538, 150);
+            this.numericUpDown2.Location = new System.Drawing.Point(514, 80);
             this.numericUpDown2.Maximum = new decimal(new int[] {
             10,
             0,
@@ -330,7 +330,7 @@
             0,
             0,
             131072});
-            this.numericUpDown3.Location = new System.Drawing.Point(538, 101);
+            this.numericUpDown3.Location = new System.Drawing.Point(514, 31);
             this.numericUpDown3.Maximum = new decimal(new int[] {
             10,
             0,
@@ -348,7 +348,7 @@
             // trackBar1
             // 
             this.trackBar1.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.trackBar1.Location = new System.Drawing.Point(329, 193);
+            this.trackBar1.Location = new System.Drawing.Point(305, 123);
             this.trackBar1.Maximum = 1000;
             this.trackBar1.Minimum = -1000;
             this.trackBar1.Name = "trackBar1";
@@ -359,7 +359,7 @@
             // trackBar2
             // 
             this.trackBar2.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.trackBar2.Location = new System.Drawing.Point(329, 145);
+            this.trackBar2.Location = new System.Drawing.Point(305, 75);
             this.trackBar2.Maximum = 1000;
             this.trackBar2.Minimum = -1000;
             this.trackBar2.Name = "trackBar2";
@@ -370,7 +370,7 @@
             // trackBar3
             // 
             this.trackBar3.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.trackBar3.Location = new System.Drawing.Point(329, 98);
+            this.trackBar3.Location = new System.Drawing.Point(305, 28);
             this.trackBar3.Maximum = 1000;
             this.trackBar3.Minimum = -1000;
             this.trackBar3.Name = "trackBar3";
@@ -381,7 +381,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(292, 203);
+            this.label5.Location = new System.Drawing.Point(268, 133);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(25, 13);
             this.label5.TabIndex = 16;
@@ -390,7 +390,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(292, 152);
+            this.label6.Location = new System.Drawing.Point(268, 82);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(31, 13);
             this.label6.TabIndex = 15;
@@ -399,27 +399,26 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(292, 101);
+            this.label7.Location = new System.Drawing.Point(268, 31);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(28, 13);
             this.label7.TabIndex = 14;
             this.label7.Text = "Yaw";
             // 
-            // elementHost1
+            // pictureBox1
             // 
-            this.elementHost1.Location = new System.Drawing.Point(15, 13);
-            this.elementHost1.Name = "elementHost1";
-            this.elementHost1.Size = new System.Drawing.Size(286, 167);
-            this.elementHost1.TabIndex = 15;
-            this.elementHost1.Text = "elementHost1";
-            //this.elementHost1.Child = this.userControl11;
+            this.pictureBox1.Location = new System.Drawing.Point(11, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(260, 260);
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(629, 496);
-            this.Controls.Add(this.elementHost1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.motorTabs);
             this.Controls.Add(this.rollValue);
             this.Controls.Add(this.pitchValue);
@@ -450,6 +449,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -481,8 +481,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button automaticButton;
         private System.Windows.Forms.Button manualButton;
-        private System.Windows.Forms.Integration.ElementHost elementHost1;
         private UserControl1 userControl11;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
