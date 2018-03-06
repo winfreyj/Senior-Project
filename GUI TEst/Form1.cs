@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Net.Sockets;
 
 namespace GUI_TEst
 {
@@ -118,6 +119,11 @@ namespace GUI_TEst
         private void LiveFeed()
         {
             
+        }
+
+        private void CreateConnections()
+        {
+
         }
     }
 }
