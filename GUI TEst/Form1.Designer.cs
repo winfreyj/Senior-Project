@@ -53,6 +53,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.yawSlider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pitchSlider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rollSlider)).BeginInit();
@@ -69,12 +70,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(307, 45);
+            this.label1.Location = new System.Drawing.Point(249, 583);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(28, 13);
             this.label1.TabIndex = 0;
@@ -83,7 +85,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(307, 96);
+            this.label2.Location = new System.Drawing.Point(249, 634);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(31, 13);
             this.label2.TabIndex = 1;
@@ -92,7 +94,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(307, 147);
+            this.label3.Location = new System.Drawing.Point(249, 685);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(25, 13);
             this.label3.TabIndex = 2;
@@ -100,7 +102,7 @@
             // 
             // yawSlider
             // 
-            this.yawSlider.Location = new System.Drawing.Point(344, 42);
+            this.yawSlider.Location = new System.Drawing.Point(286, 580);
             this.yawSlider.Maximum = 1000;
             this.yawSlider.Minimum = -1000;
             this.yawSlider.Name = "yawSlider";
@@ -111,7 +113,7 @@
             // 
             // pitchSlider
             // 
-            this.pitchSlider.Location = new System.Drawing.Point(344, 89);
+            this.pitchSlider.Location = new System.Drawing.Point(286, 627);
             this.pitchSlider.Maximum = 1000;
             this.pitchSlider.Minimum = -1000;
             this.pitchSlider.Name = "pitchSlider";
@@ -122,7 +124,7 @@
             // 
             // rollSlider
             // 
-            this.rollSlider.Location = new System.Drawing.Point(344, 137);
+            this.rollSlider.Location = new System.Drawing.Point(286, 675);
             this.rollSlider.Maximum = 1000;
             this.rollSlider.Minimum = -1000;
             this.rollSlider.Name = "rollSlider";
@@ -133,7 +135,7 @@
             // 
             // cameraCounter
             // 
-            this.cameraCounter.Location = new System.Drawing.Point(553, 10);
+            this.cameraCounter.Location = new System.Drawing.Point(128, 286);
             this.cameraCounter.Maximum = new decimal(new int[] {
             10,
             0,
@@ -158,7 +160,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(437, 12);
+            this.label4.Location = new System.Drawing.Point(12, 288);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(110, 13);
             this.label4.TabIndex = 10;
@@ -172,7 +174,7 @@
             0,
             0,
             131072});
-            this.yawValue.Location = new System.Drawing.Point(553, 45);
+            this.yawValue.Location = new System.Drawing.Point(495, 583);
             this.yawValue.Maximum = new decimal(new int[] {
             10,
             0,
@@ -191,7 +193,7 @@
             // pitchValue
             // 
             this.pitchValue.DecimalPlaces = 2;
-            this.pitchValue.Location = new System.Drawing.Point(553, 94);
+            this.pitchValue.Location = new System.Drawing.Point(495, 632);
             this.pitchValue.Maximum = new decimal(new int[] {
             10,
             0,
@@ -215,7 +217,7 @@
             0,
             0,
             131072});
-            this.rollValue.Location = new System.Drawing.Point(553, 145);
+            this.rollValue.Location = new System.Drawing.Point(495, 683);
             this.rollValue.Maximum = new decimal(new int[] {
             10,
             0,
@@ -234,7 +236,7 @@
             // motorTabs
             // 
             this.motorTabs.Controls.Add(this.motor1);
-            this.motorTabs.Location = new System.Drawing.Point(11, 282);
+            this.motorTabs.Location = new System.Drawing.Point(11, 317);
             this.motorTabs.Name = "motorTabs";
             this.motorTabs.SelectedIndex = 0;
             this.motorTabs.Size = new System.Drawing.Size(605, 202);
@@ -407,17 +409,26 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(11, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(26, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(260, 260);
+            this.pictureBox1.Size = new System.Drawing.Size(288, 260);
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(320, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(288, 260);
+            this.pictureBox2.TabIndex = 16;
+            this.pictureBox2.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(629, 496);
+            this.ClientSize = new System.Drawing.Size(636, 741);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.motorTabs);
             this.Controls.Add(this.rollValue);
@@ -450,6 +461,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -483,6 +495,7 @@
         private System.Windows.Forms.Button manualButton;
         private UserControl1 userControl11;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
