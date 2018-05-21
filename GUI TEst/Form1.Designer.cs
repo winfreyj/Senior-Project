@@ -39,7 +39,7 @@
             this.yawValue = new System.Windows.Forms.NumericUpDown();
             this.pitchValue = new System.Windows.Forms.NumericUpDown();
             this.rollValue = new System.Windows.Forms.NumericUpDown();
-            this.motorTabs = new System.Windows.Forms.TabControl();
+            this.cameraTabs = new System.Windows.Forms.TabControl();
             this.motor1 = new System.Windows.Forms.TabPage();
             this.automaticButton = new System.Windows.Forms.Button();
             this.manualButton = new System.Windows.Forms.Button();
@@ -61,7 +61,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.yawValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pitchValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rollValue)).BeginInit();
-            this.motorTabs.SuspendLayout();
+            this.cameraTabs.SuspendLayout();
             this.motor1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -233,14 +233,14 @@
             this.rollValue.TabIndex = 13;
             this.rollValue.ValueChanged += new System.EventHandler(this.RollValueChanged);
             // 
-            // motorTabs
+            // cameraTabs
             // 
-            this.motorTabs.Controls.Add(this.motor1);
-            this.motorTabs.Location = new System.Drawing.Point(11, 317);
-            this.motorTabs.Name = "motorTabs";
-            this.motorTabs.SelectedIndex = 0;
-            this.motorTabs.Size = new System.Drawing.Size(605, 202);
-            this.motorTabs.TabIndex = 14;
+            this.cameraTabs.Controls.Add(this.motor1);
+            this.cameraTabs.Location = new System.Drawing.Point(11, 317);
+            this.cameraTabs.Name = "cameraTabs";
+            this.cameraTabs.SelectedIndex = 0;
+            this.cameraTabs.Size = new System.Drawing.Size(605, 202);
+            this.cameraTabs.TabIndex = 14;
             // 
             // motor1
             // 
@@ -260,7 +260,7 @@
             this.motor1.Padding = new System.Windows.Forms.Padding(3);
             this.motor1.Size = new System.Drawing.Size(597, 176);
             this.motor1.TabIndex = 3;
-            this.motor1.Text = "Motor 1";
+            this.motor1.Text = "Camera 1";
             this.motor1.UseVisualStyleBackColor = true;
             // 
             // automaticButton
@@ -430,7 +430,7 @@
             this.ClientSize = new System.Drawing.Size(636, 741);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.motorTabs);
+            this.Controls.Add(this.cameraTabs);
             this.Controls.Add(this.rollValue);
             this.Controls.Add(this.pitchValue);
             this.Controls.Add(this.yawValue);
@@ -451,7 +451,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.yawValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pitchValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rollValue)).EndInit();
-            this.motorTabs.ResumeLayout(false);
+            this.cameraTabs.ResumeLayout(false);
             this.motor1.ResumeLayout(false);
             this.motor1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
@@ -480,7 +480,7 @@
         private System.Windows.Forms.NumericUpDown yawValue;
         private System.Windows.Forms.NumericUpDown pitchValue;
         private System.Windows.Forms.NumericUpDown rollValue;
-        private System.Windows.Forms.TabControl motorTabs;
+        private System.Windows.Forms.TabControl cameraTabs;
         private System.Windows.Forms.TabPage motor1;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.NumericUpDown numericUpDown2;

@@ -56,17 +56,17 @@ namespace GUI_TEst
         private void ChangeMotorTabs(object sender, EventArgs e)
         {
             int current, total;
-            current = motorTabs.TabPages.Count;
+            current = cameraTabs.TabPages.Count;
             total = (int)cameraCounter.Value;
             if (total > current)
             {
                 for (int i = current; i < total; i++)
-                    motorTabs.TabPages.Add(tabs[i]);
+                    cameraTabs.TabPages.Add(tabs[i]);
             }
             else
             {
                 for (int i = current; i > total; i--)
-                    motorTabs.TabPages.Remove(tabs[i - 1]);
+                    cameraTabs.TabPages.Remove(tabs[i - 1]);
             }
         }
 
