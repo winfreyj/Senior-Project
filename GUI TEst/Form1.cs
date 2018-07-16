@@ -10,47 +10,45 @@ namespace GUI_TEst
         public Form1()
         {
             InitializeComponent();
-            tabs = new TabPage[] { motor1 }; /*, motor2, motor3, motor4, motor5 };
-            motorTabs.TabPages.Remove(motor10);
-            motorTabs.TabPages.Remove(motor9);
-            motorTabs.TabPages.Remove(motor8);
-            motorTabs.TabPages.Remove(motor7);
-            motorTabs.TabPages.Remove(motor6);
-            motorTabs.TabPages.Remove(motor5);
-            motorTabs.TabPages.Remove(motor4);
-            motorTabs.TabPages.Remove(motor3);
-            motorTabs.TabPages.Remove(motor2);*/
-            LiveFeed();
+            tabs = new TabPage[] { camera1, camera2 };
+            log.AppendText("Log\n");
         }
 
         private void YawSliderMoved(object sender, EventArgs e)
         {
-            yawValue.Value = (decimal)(yawSlider.Value / 100.00);
+            if (sender.Equals(yawUpDown1))
+            {
+                yawUpDown1.Value = (decimal)(yawSlider1.Value / (double)yawSlider1.TickFrequency);
+            }
+            else
+            {
+                yawUpDown2.Value = (decimal)(yawSlider2.Value / (double)yawSlider2.TickFrequency);
+            }
         }
 
         private void PitchSliderMoved(object sender, EventArgs e)
         {
-            pitchValue.Value = (decimal)(pitchSlider.Value / 100.00);
+            pitchUpDown1.Value = (decimal)(pitchSlider1.Value / (double)pitchSlider1.TickFrequency);
         }
 
         private void RollSliderMoved(object sender, EventArgs e)
         {
-            rollValue.Value = (decimal)(rollSlider.Value / 100.00);
+            rollUpDown1.Value = (decimal)(rollSlider1.Value / (double)rollSlider1.TickFrequency);
         }
 
         private void YawValueChanged(object sender, EventArgs e)
         {
-            yawSlider.Value = (int)(yawValue.Value * 100);
+            yawSlider1.Value = (int)(yawUpDown1.Value * 100);
         }
 
         private void PitchValueChanged(object sender, EventArgs e)
         {
-            pitchSlider.Value = (int)(pitchValue.Value * 100);
+            pitchSlider1.Value = (int)(pitchUpDown1.Value * 100);
         }
 
         private void RollValueChanged(object sender, EventArgs e)
         {
-            rollSlider.Value = (int)(rollValue.Value * 100);
+            rollSlider1.Value = (int)(rollUpDown1.Value * 100);
         }
 
         private void ChangeMotorTabs(object sender, EventArgs e)
@@ -72,58 +70,42 @@ namespace GUI_TEst
 
         private void ManualOptions(object sender, EventArgs e)
         {
-            trackBar1.Enabled = true;
-            trackBar2.Enabled = true;
-            trackBar3.Enabled = true;
+            if (sender.Equals(manualButton1))
+            {
+                rollSlider1.Enabled = true;
+                pitchSlider1.Enabled = true;
+                yawSlider1.Enabled = true;
 
-            numericUpDown1.Enabled = true;
-            numericUpDown2.Enabled = true;
-            numericUpDown3.Enabled = true;
+                rollUpDown1.Enabled = true;
+                pitchUpDown1.Enabled = true;
+                yawUpDown1.Enabled = true;
+            }
+            else
+            {
+                rollSlider2.Enabled = true;
+                pitchSlider2.Enabled = true;
+                yawSlider2.Enabled = true;
+
+                rollUpDown2.Enabled = true;
+                pitchUpDown2.Enabled = true;
+                yawUpDown2.Enabled = true;
+            }
         }
 
         private void AutomaticOption(object sender, EventArgs e)
         {
-            trackBar1.Enabled = false;
-            trackBar2.Enabled = false;
-            trackBar3.Enabled = false;
+            rollSlider1.Enabled = false;
+            pitchSlider1.Enabled = false;
+            yawSlider1.Enabled = false;
 
-            numericUpDown1.Enabled = false;
-            numericUpDown2.Enabled = false;
-            numericUpDown3.Enabled = false;
-
-            for (int i = trackBar1.Value; i <= 800; i += 1)
-            {
-                trackBar1.Value = i;
-                numericUpDown1.Value = (decimal)(trackBar1.Value / 100.00);
-                numericUpDown1.Update();
-                for (int j = 0; j < 1000000; j++) ;
-            }
-
-            for (int i = trackBar2.Value; i >= -500; i -= 1)
-            {
-                trackBar2.Value = i;
-                numericUpDown2.Value = (decimal)(trackBar2.Value / 100.00);
-                numericUpDown2.Update();
-                for (int j = 0; j < 1000000; j++) ;
-            }
-
-            for (int i = trackBar3.Value; i <= 150; i += 1)
-            {
-                trackBar3.Value = i;
-                numericUpDown3.Value = (decimal)(trackBar3.Value / 100.00);
-                numericUpDown3.Update();
-                for (int j = 0; j < 1000000; j++) ;
-            }
+            rollUpDown1.Enabled = false;
+            pitchUpDown1.Enabled = false;
+            yawUpDown1.Enabled = false;
         }
 
-        private void LiveFeed()
+        public void UpdateLog(string message)
         {
-            
-        }
-
-        private void CreateConnections()
-        {
-
+            log.AppendText(message);
         }
     }
 }
