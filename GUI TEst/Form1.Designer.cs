@@ -43,9 +43,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.log = new System.Windows.Forms.TextBox();
             this.camera2 = new System.Windows.Forms.TabPage();
             this.automaticButton2 = new System.Windows.Forms.Button();
             this.manualButton2 = new System.Windows.Forms.Button();
@@ -58,6 +55,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.log = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.cameraCounter)).BeginInit();
             this.cameraTabs.SuspendLayout();
             this.camera1.SuspendLayout();
@@ -67,8 +67,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.rollSlider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pitchSlider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.yawSlider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.camera2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rollUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pitchUpDown2)).BeginInit();
@@ -76,6 +74,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.rollSlider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pitchSlider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.yawSlider2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // cameraCounter
@@ -297,31 +297,6 @@
             this.label7.TabIndex = 14;
             this.label7.Text = "Yaw";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(26, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(288, 260);
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(320, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(288, 260);
-            this.pictureBox2.TabIndex = 16;
-            this.pictureBox2.TabStop = false;
-            // 
-            // log
-            // 
-            this.log.Location = new System.Drawing.Point(641, 12);
-            this.log.Multiline = true;
-            this.log.Name = "log";
-            this.log.ReadOnly = true;
-            this.log.Size = new System.Drawing.Size(264, 507);
-            this.log.TabIndex = 17;
-            // 
             // camera2
             // 
             this.camera2.Controls.Add(this.automaticButton2);
@@ -498,6 +473,33 @@
             this.label3.TabIndex = 25;
             this.label3.Text = "Yaw";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(26, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(288, 260);
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(320, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(288, 260);
+            this.pictureBox2.TabIndex = 16;
+            this.pictureBox2.TabStop = false;
+            // 
+            // log
+            // 
+            this.log.Location = new System.Drawing.Point(641, 12);
+            this.log.Multiline = true;
+            this.log.Name = "log";
+            this.log.ReadOnly = true;
+            this.log.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.log.Size = new System.Drawing.Size(264, 507);
+            this.log.TabIndex = 17;
+            this.log.WordWrap = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -521,8 +523,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.rollSlider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pitchSlider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.yawSlider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.camera2.ResumeLayout(false);
             this.camera2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rollUpDown2)).EndInit();
@@ -531,6 +531,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.rollSlider2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pitchSlider2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.yawSlider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

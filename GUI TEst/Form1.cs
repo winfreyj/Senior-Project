@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Net.Sockets;
+using System.Text;
 
 namespace GUI_TEst
 {
@@ -12,6 +13,14 @@ namespace GUI_TEst
             InitializeComponent();
             tabs = new TabPage[] { camera1, camera2 };
             log.AppendText("Log\n");
+            for(int i=0; i<=1000; i++)
+            {
+                StringBuilder temp = new StringBuilder();
+                temp.Append(i);
+                temp.Append("\n");
+                UpdateLog(temp.ToString());
+            }
+            UpdateLog("12345678901234567890123456789012345678901234567890\n");
         }
 
         private void YawSliderMoved(object sender, EventArgs e)
