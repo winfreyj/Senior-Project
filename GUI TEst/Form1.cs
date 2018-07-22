@@ -12,15 +12,7 @@ namespace GUI_TEst
         {
             InitializeComponent();
             tabs = new TabPage[] { camera1, camera2 };
-            log.AppendText("Log\n");
-            for(int i=0; i<=1000; i++)
-            {
-                StringBuilder temp = new StringBuilder();
-                temp.Append(i);
-                temp.Append("\n");
-                UpdateLog(temp.ToString());
-            }
-            UpdateLog("12345678901234567890123456789012345678901234567890\n");
+            UpdateLog("Insert error messages here.\n");
         }
 
         private void YawSliderMoved(object sender, EventArgs e)

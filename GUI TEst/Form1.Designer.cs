@@ -221,12 +221,12 @@
             131072});
             this.yawUpDown1.Location = new System.Drawing.Point(514, 18);
             this.yawUpDown1.Maximum = new decimal(new int[] {
-            10,
+            5,
             0,
             0,
             0});
             this.yawUpDown1.Minimum = new decimal(new int[] {
-            10,
+            5,
             0,
             0,
             -2147483648});
@@ -263,8 +263,8 @@
             // 
             this.yawSlider1.BackColor = System.Drawing.SystemColors.HighlightText;
             this.yawSlider1.Location = new System.Drawing.Point(305, 17);
-            this.yawSlider1.Maximum = 1000;
-            this.yawSlider1.Minimum = -1000;
+            this.yawSlider1.Maximum = 500;
+            this.yawSlider1.Minimum = -500;
             this.yawSlider1.Name = "yawSlider1";
             this.yawSlider1.Size = new System.Drawing.Size(203, 45);
             this.yawSlider1.TabIndex = 17;
@@ -397,12 +397,12 @@
             131072});
             this.yawUpDown2.Location = new System.Drawing.Point(514, 18);
             this.yawUpDown2.Maximum = new decimal(new int[] {
-            10,
+            5,
             0,
             0,
             0});
             this.yawUpDown2.Minimum = new decimal(new int[] {
-            10,
+            5,
             0,
             0,
             -2147483648});
@@ -439,8 +439,8 @@
             // 
             this.yawSlider2.BackColor = System.Drawing.SystemColors.HighlightText;
             this.yawSlider2.Location = new System.Drawing.Point(305, 17);
-            this.yawSlider2.Maximum = 1000;
-            this.yawSlider2.Minimum = -1000;
+            this.yawSlider2.Maximum = 500;
+            this.yawSlider2.Minimum = -500;
             this.yawSlider2.Name = "yawSlider2";
             this.yawSlider2.Size = new System.Drawing.Size(203, 45);
             this.yawSlider2.TabIndex = 28;
