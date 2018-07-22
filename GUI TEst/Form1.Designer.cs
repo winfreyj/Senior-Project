@@ -58,6 +58,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.log = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.cameraCounter)).BeginInit();
             this.cameraTabs.SuspendLayout();
             this.camera1.SuspendLayout();
@@ -182,7 +183,7 @@
             0,
             -2147483648});
             this.rollUpDown1.Name = "rollUpDown1";
-            this.rollUpDown1.Size = new System.Drawing.Size(44, 20);
+            this.rollUpDown1.Size = new System.Drawing.Size(55, 20);
             this.rollUpDown1.TabIndex = 22;
             this.rollUpDown1.ValueChanged += new System.EventHandler(this.RollValueChanged);
             // 
@@ -206,7 +207,7 @@
             0,
             -2147483648});
             this.pitchUpDown1.Name = "pitchUpDown1";
-            this.pitchUpDown1.Size = new System.Drawing.Size(44, 20);
+            this.pitchUpDown1.Size = new System.Drawing.Size(55, 20);
             this.pitchUpDown1.TabIndex = 21;
             this.pitchUpDown1.ValueChanged += new System.EventHandler(this.PitchValueChanged);
             // 
@@ -230,7 +231,7 @@
             0,
             -2147483648});
             this.yawUpDown1.Name = "yawUpDown1";
-            this.yawUpDown1.Size = new System.Drawing.Size(44, 20);
+            this.yawUpDown1.Size = new System.Drawing.Size(55, 20);
             this.yawUpDown1.TabIndex = 20;
             this.yawUpDown1.ValueChanged += new System.EventHandler(this.YawValueChanged);
             // 
@@ -358,7 +359,7 @@
             0,
             -2147483648});
             this.rollUpDown2.Name = "rollUpDown2";
-            this.rollUpDown2.Size = new System.Drawing.Size(44, 20);
+            this.rollUpDown2.Size = new System.Drawing.Size(55, 20);
             this.rollUpDown2.TabIndex = 33;
             this.rollUpDown2.ValueChanged += new System.EventHandler(this.RollValueChanged);
             // 
@@ -382,7 +383,7 @@
             0,
             -2147483648});
             this.pitchUpDown2.Name = "pitchUpDown2";
-            this.pitchUpDown2.Size = new System.Drawing.Size(44, 20);
+            this.pitchUpDown2.Size = new System.Drawing.Size(55, 20);
             this.pitchUpDown2.TabIndex = 32;
             this.pitchUpDown2.ValueChanged += new System.EventHandler(this.PitchValueChanged);
             // 
@@ -406,7 +407,7 @@
             0,
             -2147483648});
             this.yawUpDown2.Name = "yawUpDown2";
-            this.yawUpDown2.Size = new System.Drawing.Size(44, 20);
+            this.yawUpDown2.Size = new System.Drawing.Size(55, 20);
             this.yawUpDown2.TabIndex = 31;
             this.yawUpDown2.ValueChanged += new System.EventHandler(this.YawValueChanged);
             // 
@@ -491,20 +492,31 @@
             // 
             // log
             // 
-            this.log.Location = new System.Drawing.Point(641, 12);
+            this.log.Location = new System.Drawing.Point(641, 40);
             this.log.Multiline = true;
             this.log.Name = "log";
             this.log.ReadOnly = true;
             this.log.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.log.Size = new System.Drawing.Size(264, 507);
+            this.log.Size = new System.Drawing.Size(264, 479);
             this.log.TabIndex = 17;
             this.log.WordWrap = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(755, 12);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(48, 25);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "Log";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(985, 532);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.log);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -569,6 +581,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label8;
     }
 }
 
